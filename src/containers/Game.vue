@@ -45,10 +45,6 @@
   import Header from './components/Header.vue';
 
   export default {
-    props: {
-
-    },
-
     data() {
       return {
         selectedIds: [],
