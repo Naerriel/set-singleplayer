@@ -1,5 +1,5 @@
 import store from '../../../src/store/index';
-import {generateCards} from '../../../src/store/cards';
+import { generateCards } from '../../../src/store/cards';
 
 const card = [{
   number: 1,

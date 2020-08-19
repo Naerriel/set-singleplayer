@@ -17,7 +17,7 @@ function isSameOrDifferent(array) {
   return different || same;
 }
 
-export function isSet(set) {
+export function areCardsASet(set) {
   if (set.length !== 3) {
     return false;
   }

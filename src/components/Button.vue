@@ -28,9 +28,11 @@
     padding: 6px 24px;
     box-shadow: $box-shadow;
   }
+
   .btn:hover {
     background-color: #f6f6f6;
   }
+
   .btn:active {
     position: relative;
     top: 1px;

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { generateCards } from './cards';
-import { isSet } from './helpers/isSet';
+import { areCardsASet } from './areCardsASet';
 
 Vue.use(Vuex);
 
@@ -36,7 +36,7 @@ export default new Vuex.Store({
     },
 
     selectSet({ state, dispatch, commit }, cardIds) {
-      if (isSet([
+      if (areCardsASet([
         state.board[cardIds[0]],
         state.board[cardIds[1]],
         state.board[cardIds[2]],

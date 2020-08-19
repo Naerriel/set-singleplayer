@@ -5,7 +5,10 @@
       :points="points"
       @restart="restart"
     />
-    <transition-group v-if="board.length" name="cards" tag="div" class="board">
+    <div
+      v-if="board.length"
+      class="board"
+    >
       <div
         v-for="(card, index) in board"
         :key="card.id"
@@ -20,8 +23,7 @@
           class="card"
         />
       </div>
-    </transition-group>
-
+    </div>
     <div
       v-else
       class="start-btn-wrapper"
@@ -74,17 +76,14 @@
         }
         this.selectedIds.push(index);
 
-        if (this.selectedIds.length < 3) {
-          return;
+        if (this.selectedIds.length === 3) {
+          this.selectSet();
         }
-        this.$store.dispatch('selectSet', this.selectedIds)
-          .then(() => {
-            console.log('log: SET!');
-            this.selectedIds = [];
-          })
-          .catch((error) => {
-            console.log('log: error = ', error);
-          });
+      },
+
+      async selectSet() {
+        await this.$store.dispatch('selectSet', this.selectedIds);
+        this.selectedIds = [];
       },
 
       getCardWrapperClasses(index) {
@@ -109,10 +108,6 @@
           this.time += 1;
         }, 1000);
       }
-    },
-
-    mounted() {
-      // this.restart();
     },
 
     beforeDestroy() {
@@ -181,8 +176,7 @@
   }
 
   @include mobile {
-    .board,
-    .start-btn {
+    .board {
       margin: auto;
     }
 

@@ -29,6 +29,5 @@ export function generateCards() {
       });
     });
   });
-  // return cards;
   return shuffleArray(cards);
 }

@@ -1,8 +1,8 @@
-import { isSet } from '../../../src/store/helpers/isSet';
+import {areCardsASet} from '../../../src/store/areCardsASet';
 
 describe('isSet', () => {
   it('returns true when finds a set', () => {
-    expect(isSet([{
+    expect(areCardsASet([{
       shape: 'diamond',
       color: 'red',
       number: 2,
@@ -21,7 +21,7 @@ describe('isSet', () => {
   });
 
   it('returns false when cards arent a set', () => {
-    expect(isSet([{
+    expect(areCardsASet([{
       shape: 'diamond',
       color: 'red',
       number: 2,

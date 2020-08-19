@@ -83,30 +83,30 @@
     fill: $purple;
   }
 
+  .striped-green,
+  .striped-red,
+  .striped-purple {
+    stroke-miterlimit: 10;
+    stroke-width: 5px;
+  }
+
   .striped-green {
     fill: url(#striped-green);
     stroke: $green;
-    stroke-miterlimit: 10;
-    stroke-width: 5px;
   }
 
   .striped-red {
     fill: url(#striped-red);
     stroke: $red;
-    stroke-miterlimit: 10;
-    stroke-width: 5px;
   }
 
   .striped-purple {
     fill: url(#striped-purple);
     stroke: $purple;
-    stroke-miterlimit: 10;
-    stroke-width: 5px;
   }
 
   .open {
     fill: none;
-    stroke-miterlimit: 10;
-    stroke-width: 5px;
+    stroke-width: 3px;
   }
 </style>
