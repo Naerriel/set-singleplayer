@@ -141,6 +141,7 @@
     justify-content: center;
     flex-flow: row wrap;
     max-width: $game-width;
+    width: 100%;
   }
 
   .start-btn-wrapper {
@@ -187,6 +188,10 @@
 
     .card-wrapper {
       padding: 5px;
+    }
+
+    .start-btn-wrapper {
+      height: 200px;
     }
   }
 </style>
