@@ -1,4 +1,4 @@
-import { isSet } from '../../src/store/helpers/isSet';
+import { isSet } from '../../../src/store/helpers/isSet';
 
 describe('isSet', () => {
   it('returns true when finds a set', () => {
