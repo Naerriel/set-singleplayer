@@ -41,7 +41,6 @@ export default new Vuex.Store({
         state.board[cardIds[1]],
         state.board[cardIds[2]],
       ])) {
-        // dispatch('replaceCards', cardIds);
         dispatch('removeCards', cardIds);
         dispatch('drawCards');
         commit('setPoints', state.points + 3);
@@ -50,18 +49,6 @@ export default new Vuex.Store({
 
     removeCards({ commit, state }, cardIds) {
       const board = [...state.board].filter((_, index) => !cardIds.includes(index));
-      commit('setBoard', board);
-    },
-
-    replaceCards({ commit, state }, cardIds) {
-      const cards = [...state.cards];
-      const board = [...state.board].map((value, index) => {
-        if (!cardIds.includes(index)) {
-          return value;
-        }
-        return cards.pop();
-      });
-      commit('setCards', cards);
       commit('setBoard', board);
     },
 
