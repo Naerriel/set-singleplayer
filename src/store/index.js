@@ -12,7 +12,7 @@ const vueSet = (key) => (state, val) => {
 export default new Vuex.Store({
   state: {
     cardsPerBoard: 15,
-    cards: generateCards(),
+    cards: [],
     board: [],
     points: 0,
   },
