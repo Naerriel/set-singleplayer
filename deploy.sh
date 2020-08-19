@@ -15,5 +15,5 @@ git config user.name Naerriel
 git config user.email naerriel@gmail.com
 git config credential.username Naerriel
 git commit -m 'deploy'
-git push -f git@github.com:Naerriel/set-game.git master:gh-pages
+git push -f git@github.com:Naerriel/set-singleplayer.git master:gh-pages
 cd -
