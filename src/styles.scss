@@ -8,12 +8,14 @@ $outline: 1px solid blue;
 
 $card-height: 90px;
 $card-height-mobile: 60px;
+$card-height-small-mobile: 40px;
 
 $card-padding: 20px;
-$card-padding-mobile: 10px;
+$card-padding-mobile: 7px;
 
 $shape-height: 60px;
 $shape-height-mobile: 40px;
+$shape-height-small-mobile: 27px;
 
 $red: #e74c3c;
 $green: #27ae60;
@@ -26,6 +28,12 @@ $game-width: 800px;
 }
 
 $mobile-width: 768px;
+
+@mixin small-mobile {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media only screen and (max-width: #{$mobile-width}) {

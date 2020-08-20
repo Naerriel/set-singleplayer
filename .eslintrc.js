@@ -30,6 +30,7 @@ module.exports = {
     }],
     'no-param-reassign': [1, { 'props': false }],
     '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/consistent-type-assertions': 'off',
     'import/prefer-default-export': 'off',
     'no-underscore-dangle': [1],
     'import/no-unresolved': [

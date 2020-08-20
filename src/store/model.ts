@@ -6,5 +6,3 @@ export interface State {
   board: Card[];
   points: number;
 }
-
-export type StateValue = Card[] | number;

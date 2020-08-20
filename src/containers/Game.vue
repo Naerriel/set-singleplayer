@@ -133,6 +133,7 @@
     flex-flow: row wrap;
     max-width: $game-width;
     width: 100%;
+    min-width: 170px;
   }
 
   .start-btn-wrapper {
@@ -147,6 +148,7 @@
     box-sizing: border-box;
     width: 20%;
     padding: 10px;
+    min-width: 40px;
   }
 
   .outline .card-wrapper:focus {
@@ -182,6 +184,20 @@
 
     .start-btn-wrapper {
       height: 200px;
+    }
+  }
+
+  @include small-mobile {
+    .game {
+      padding: 10px;
+    }
+
+    .card-wrapper {
+      padding: 2px;
+    }
+
+    .card {
+      padding: 0;
     }
   }
 </style>

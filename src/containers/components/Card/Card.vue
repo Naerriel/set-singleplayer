@@ -56,4 +56,14 @@
       }
     }
   }
+
+  @include small-mobile {
+    .card {
+      height: $card-height-small-mobile;
+
+      svg {
+        height: $shape-height-small-mobile
+      }
+    }
+  }
 </style>
