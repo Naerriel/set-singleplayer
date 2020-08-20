@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { generateCards } from './cards';
-import { areCardsASet } from './areCardsASet';
+import { generateCards } from '@/logic/cards';
+import { areCardsASet } from '@/logic/areCardsASet';
+import { State, StateValue } from '@/store/model';
+import { Card } from '@/logic/model';
 
 Vue.use(Vuex);
 
-const vueSet = (key) => (state, val) => {
+const vueSet = (key: string) => (state: State, val: StateValue) => {
   Vue.set(state, key, val);
 };
 
@@ -25,11 +27,11 @@ export default new Vuex.Store({
 
   actions: {
     drawCards({ commit, state }) {
-      const board = [...state.board];
-      const cards = [...state.cards];
+      const board: Card[] = [...state.board];
+      const cards: Card[] = [...state.cards];
 
       while (board.length < state.cardsPerBoard && cards.length) {
-        board.push(cards.pop());
+        board.push(cards.pop() as Card);
       }
       commit('setCards', cards);
       commit('setBoard', board);
@@ -58,8 +60,5 @@ export default new Vuex.Store({
       commit('setPoints', 0);
       dispatch('drawCards');
     }
-  },
-
-  modules: {
   },
 });
