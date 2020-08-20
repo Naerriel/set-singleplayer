@@ -174,6 +174,10 @@
   }
 
   @include mobile {
+    .game {
+      padding: 10px 20px;
+    }
+
     .board {
       margin: auto;
     }
@@ -189,7 +193,7 @@
 
   @include small-mobile {
     .game {
-      padding: 10px;
+      padding: 8px;
     }
 
     .card-wrapper {
