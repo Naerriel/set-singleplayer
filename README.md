@@ -1,5 +1,7 @@
 # set
 
+https://naerriel.github.io/set-singleplayer/
+
 ## Project setup
 ```
 npm install
